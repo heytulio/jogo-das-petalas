@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Jogo da Flor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section id="tela-menu" class="tela ativa">
+      <h1>Jogo da Flor 🌸</h1>
+      <button class="botao-grande" data-modo="1">1 Jogador</button>
+      <button class="botao-grande" data-modo="2">2 Jogadores</button>
+    </section>
+
+    <section id="tela-config" class="tela">
+      <h2>Jogador 1 ‒ escolha a palavra e a dica</h2>
+      <input id="palavraCustom" placeholder="Palavra secreta" />
+      <input id="dicaCustom" placeholder="Dica" />
+      <button id="btnIniciar2p">Começar</button>
+      <button class="voltar">⬅ Menu</button>
+    </section>
+
+    <section id="tela-jogo" class="tela">
+      <div id="flor">
+        <svg viewBox="0 0 200 200">
+          <g>
+            <ellipse
+              id="pet1"
+              class="petala"
+              cx="100"
+              cy="55"
+              rx="20"
+              ry="35"
+            />
+            <ellipse
+              id="pet2"
+              class="petala"
+              cx="100"
+              cy="55"
+              rx="20"
+              ry="35"
+              transform="rotate(60, 100, 100)"
+            />
+            <ellipse
+              id="pet3"
+              class="petala"
+              cx="100"
+              cy="55"
+              rx="20"
+              ry="35"
+              transform="rotate(120, 100, 100)"
+            />
+            <ellipse
+              id="pet4"
+              class="petala"
+              cx="100"
+              cy="55"
+              rx="20"
+              ry="35"
+              transform="rotate(180, 100, 100)"
+            />
+            <ellipse
+              id="pet5"
+              class="petala"
+              cx="100"
+              cy="55"
+              rx="20"
+              ry="35"
+              transform="rotate(240, 100, 100)"
+            />
+            <ellipse
+              id="pet6"
+              class="petala"
+              cx="100"
+              cy="55"
+              rx="20"
+              ry="35"
+              transform="rotate(300, 100, 100)"
+            />
+          </g>
+          <circle class="miolo" cx="100" cy="100" r="25" />
+        </svg>
+      </div>
+
+      <p id="dica"></p>
+      <p id="palavra"></p>
+      <div id="letras"></div>
+
+      <p id="mensagem"></p>
+      <button id="btnReiniciar" class="voltar">🔄 Novo Jogo</button>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

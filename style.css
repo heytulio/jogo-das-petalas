@@ -1,0 +1,163 @@
+:root {
+  --bg-color: #f0fff0;
+  --text-color: #3e4a3e;
+  --primary-color: #ff69b4;
+  --secondary-color: #ffd700;
+  --light-gray: #d3d3d3;
+  --white: #ffffff;
+  --win-color: #388e3c;
+  --lose-color: #d32f2f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", "Segoe UI", Arial, sans-serif;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+button:hover {
+  filter: brightness(1.05);
+}
+input {
+  padding: 8px 12px;
+  border: 2px solid var(--light-gray);
+  border-radius: 8px;
+  width: 260px;
+  margin: 8px auto;
+  display: block;
+  font-size: 1rem;
+}
+input:focus {
+  outline: 2px solid var(--primary-color);
+  border-color: var(--primary-color);
+}
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+h2 {
+  margin-bottom: 1rem;
+}
+
+.tela {
+  display: none;
+  width: 100%;
+  max-width: 420px;
+  padding: 24px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.tela.ativa {
+  display: block;
+}
+
+.botao-grande {
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 14px 32px;
+  margin: 12px 0;
+  width: 260px;
+}
+#btnIniciar2p {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.voltar {
+  margin-top: 12px;
+  background: var(--light-gray);
+  color: var(--text-color);
+  padding: 8px 22px;
+}
+
+#flor {
+  width: 200px;
+  margin: 0 auto 16px;
+}
+svg {
+  width: 100%;
+  height: auto;
+}
+.petala {
+  fill: var(--primary-color);
+}
+.miolo {
+  fill: var(--secondary-color);
+}
+
+#dica {
+  min-height: 24px;
+  margin-bottom: 8px;
+}
+#palavra {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 6px;
+  margin-bottom: 12px;
+}
+
+#letras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 10px 0;
+}
+.letra-btn {
+  background: var(--white);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.letra-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  filter: none;
+}
+
+#mensagem {
+  font-size: 1.3rem;
+  font-weight: bold;
+  height: 34px;
+  margin-top: 8px;
+}
+.win {
+  color: var(--win-color);
+}
+.lose {
+  color: var(--lose-color);
+}
+
+@media (max-width: 380px) {
+  #letras {
+    gap: 4px;
+  }
+  .letra-btn {
+    width: 32px;
+    height: 32px;
+  }
+}
