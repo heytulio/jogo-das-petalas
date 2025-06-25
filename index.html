@@ -14,6 +14,8 @@
   </head>
 
   <body>
+    <button id="theme" aria-label="Alternar tema">🌙</button>
+
     <section id="tela-menu" class="tela ativa">
       <h1>Jogo da Flor 🌸</h1>
       <button class="botao-grande" data-modo="1">1 Jogador</button>
@@ -29,6 +31,9 @@
     </section>
 
     <section id="tela-jogo" class="tela">
+      <div id="ajuda">
+        <button id="btnAjuda">?</button>
+      </div>
       <div id="flor">
         <svg viewBox="0 0 200 200">
           <g>
@@ -93,6 +98,10 @@
       <p id="dica"></p>
       <p id="palavra"></p>
       <div id="letras"></div>
+      <div id="palavraGuess">
+        <input type="text" id="palpiteDaPalavra" />
+        <button id="btnGuess">PALPITE COMPLETO</button>
+      </div>
 
       <p id="mensagem"></p>
       <button id="btnReiniciar" class="voltar">🔄 Novo Jogo</button>

@@ -133,6 +133,13 @@ svg {
   font-weight: bold;
   font-size: 1.1rem;
 }
+
+.letra-btn:hover {
+  background: var(--primary-color);
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
 .letra-btn:disabled {
   opacity: 0.35;
   cursor: not-allowed;
@@ -140,9 +147,9 @@ svg {
 }
 
 #mensagem {
+  display: block;
   font-size: 1.3rem;
   font-weight: bold;
-  height: 34px;
   margin-top: 8px;
 }
 .win {
@@ -150,6 +157,54 @@ svg {
 }
 .lose {
   color: var(--lose-color);
+}
+
+#ajuda {
+  display: flex;
+  justify-content: end;
+  padding: 15px;
+}
+
+#ajuda > button {
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(57, 56, 56, 0.652);
+}
+
+#palpiteDaPalavra {
+  display: none;
+}
+
+#btnGuess {
+  padding: 15px;
+}
+
+#theme {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--text-color);
+  border: 2px solid var(--light-gray);
+}
+
+#theme:hover {
+  transform: scale(1.05);
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+body.tema-escuro {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #bb86fc;
+  --light-gray: #2c2c2c;
+  --white: #1e1e1e;
 }
 
 @media (max-width: 380px) {
